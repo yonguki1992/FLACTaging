@@ -31,12 +31,10 @@ public class TagParser {
 		Scanner sc = new Scanner(System.in);
 
 		
-		
-//		"D:\\Ripping\\music\\Vindictus\\Vindictus - season 1";
 		System.out.print("please input filePath > ");
 		String filePath1 = sc.nextLine();
 		System.out.print("pleas input sourceUrl > ");
-//		"https://www.melon.com/song/detail.htm?songId=9604149&";
+		//ex: "https://www.melon.com/song/detail.htm?songId=9604149&";
 		String sourceUrl = sc.nextLine();
 		
 
@@ -86,11 +84,6 @@ public class TagParser {
 					System.out.println("Album : " + tag.getFirst(FieldKey.ALBUM));
 					System.out.println("Year : " + tag.getFirst(FieldKey.YEAR));
 					System.out.println("Genre : " + tag.getFirst(FieldKey.GENRE));
-					
-					// https://www.melon.com/song/detail.htm?songId=9604149 ~ 72 (마영전 시즌1 브금)
-					// https://www.melon.com/song/detail.htm?songId=9615909 ~ 30 (마영전 시즌2 브금)
-					// https://www.melon.com/song/detail.htm?songId=9624724 ~ 30 (마영전 시즌3 ep1 브금)
-					// url은 String.format(url+"%02d", i+49) 형식으로 되어잇음
 					
 					HashMap<String, String> cssQueryMap = makeQuery();
 					
